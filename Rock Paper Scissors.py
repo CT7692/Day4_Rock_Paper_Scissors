@@ -1,3 +1,5 @@
+import secrets
+
 rock = '''
     _______
 ---'   ____)
@@ -24,9 +26,6 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-
-#Write your code below this line 👇
-import random
 
 def outcome(player, comp, r, p, s):
   if (player == r) and (comp == s):
@@ -57,7 +56,7 @@ int_choice = int(player_choice)
 player_choice = choice_list[int_choice]
 print(f"\nYou chose:\n{player_choice}")
 
-computer_int = random.randint(0, 2)
+computer_int = secrets.SystemRandom().randint(0, 2)
 computer_choice = choice_list[computer_int]
 print(f"Computer chose:\n{computer_choice}")
 
